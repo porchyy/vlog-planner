@@ -1,6 +1,6 @@
 ---
 name: competition-vlog-planner
-description: สร้างแผนวล็อกสไตล์ time-pressure/devlog สำหรับการแข่งขัน hackathon, coding competition, game jam, โปรเจกต์ที่มีเดดไลน์ หรือกิจกรรมที่มีจุดเริ่มและจบชัดเจน ครอบคลุม packaging, hook, story arc, shot list, retention, คลิปสั้น, workflow ตัดต่อ และ PDF ภาษาไทยที่อ่านง่าย ใช้เมื่อผู้ใช้ขอวางแผนวล็อก ถ่ายคลิปแข่ง ทำ devlog คิดชื่อหรือภาพปก วางไทม์ไลน์ถ่ายทำ แนะนำ CapCut, DaVinci Resolve หรือ After Effects วิเคราะห์สไตล์ครีเอเตอร์ ทำมายด์แมพ หรือขอให้สรุปแผนเป็น PDF/printable plan
+description: วางแผนวล็อกแข่งขันและ devlog สำหรับ hackathon หรืองานมีเดดไลน์ สร้าง hook, story arc, shot list, มายด์แมพ, แผนตัดต่อ CapCut/DaVinci Resolve และ PDF ใช้เมื่อขอแผนถ่ายหรือตัดต่อวล็อกแข่งขัน
 ---
 
 # Competition Vlog Planner
