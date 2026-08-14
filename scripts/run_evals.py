@@ -78,9 +78,6 @@ def main() -> int:
         "references/pdf-output.md",
         "scripts/run_evals.py",
         "tests/evals.json",
-        "docs/images/test-cover.png",
-        "docs/images/test-shot-priority.png",
-        "docs/images/test-workflow.png",
         "docs/images/pdf-readable-example.png",
     ]
     checks: list[Check] = []

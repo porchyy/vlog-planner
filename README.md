@@ -4,7 +4,7 @@
 
 > เวอร์ชัน 2.2 เพิ่ม PDF ภาษาไทยแบบ readable summary/field plan พร้อม visual QA ทุกหน้า
 
-![ตัวอย่างแผน Competition Vlog Planner](docs/images/test-cover.png)
+![ตัวอย่าง PDF จาก Competition Vlog Planner](docs/images/pdf-readable-example.png)
 
 ## จุดเด่น
 
@@ -20,17 +20,7 @@
 
 ## ตัวอย่างผลลัพธ์
 
-### Readable PDF
-
-![Readable PDF example](docs/images/pdf-readable-example.png)
-
 ตัวอย่าง PDF ใช้ตัวอักษรใหญ่ขึ้น แยกหนึ่งสารหลักต่อหน้า และให้ P1, emergency, privacy กับ field card หาเจอได้เร็ว
-
-### Planning system
-
-| Shot Priority | Workflow Selector |
-|---|---|
-| ![Shot Priority](docs/images/test-shot-priority.png) | ![Workflow และ Safety](docs/images/test-workflow.png) |
 
 ไฟล์ PDF ฉบับเต็มถูกสร้างจากชุดทดสอบและตรวจ visual layout ทุกหน้าแล้ว ผู้ใช้สามารถรัน eval ซ้ำเพื่อสร้างรายงานผลในเครื่องของตนเอง
 
