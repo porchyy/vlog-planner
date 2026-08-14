@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competition Vlog Planner"
+  short_description: "วางแผนวล็อกแข่งขันและ devlog แบบครบวงจร"
+  default_prompt: "ใช้ $competition-vlog-planner วางแผนวล็อกการแข่งขันตั้งแต่โครงเรื่อง การถ่ายทำ จนถึงการตัดต่อ"
