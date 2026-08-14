@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "cases": [
     {
       "id": "one-day-solo-hackathon",
@@ -44,7 +44,18 @@
         "capcut_only_workflow",
         "honest_payoff"
       ]
+    },
+    {
+      "id": "readable-pdf-export",
+      "prompt": "ใช้ $competition-vlog-planner สรุปแผน Coding Thailand เป็น PDF ภาษาไทยสำหรับเปิดดูหน้างาน ขอให้อ่านง่าย ไม่ใช้ตารางแน่น และบันทึกไว้ที่ D:\\codingthailand-vlog-plan.pdf",
+      "expected": [
+        "pdf_optional_only_when_requested",
+        "pdf_readable_hierarchy",
+        "pdf_thai_font",
+        "pdf_visual_qa",
+        "pdf_output_path",
+        "pdf_field_card"
+      ]
     }
   ]
 }
-

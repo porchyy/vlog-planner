@@ -2,7 +2,7 @@
 
 สกิลภาษาไทยสำหรับวางแผนวล็อกการแข่งขันและ devlog ตั้งแต่ packaging ก่อนถ่าย ไปจนถึงการอ่าน retention หลังเผยแพร่ เหมาะกับ hackathon, coding competition, game jam และโปรเจกต์ที่มีเดดไลน์
 
-> เวอร์ชัน 2.1 เพิ่ม Shot Priority, Emergency Checklist, Privacy Checklist, workflow 3 ระดับ และ eval 3 สถานการณ์
+> เวอร์ชัน 2.2 เพิ่ม PDF ภาษาไทยแบบ readable summary/field plan พร้อม visual QA ทุกหน้า
 
 ![ตัวอย่างแผน Competition Vlog Planner](docs/images/test-cover.png)
 
@@ -16,8 +16,17 @@
 - ตรวจ consent, กติกาสถานที่, API key, token, private repository และข้อมูลบนหน้าจอ
 - เลือก workflow แบบ CapCut only, CapCut -> DaVinci หรือ DaVinci -> After Effects -> DaVinci
 - วาง retention map, short-form derivative และ post-publish learning loop
+- ส่งออกแผนเป็น PDF ภาษาไทยที่อ่านง่ายเมื่อผู้ใช้ขอ พร้อม printable field card
 
 ## ตัวอย่างผลลัพธ์
+
+### Readable PDF
+
+![Readable PDF example](docs/images/pdf-readable-example.png)
+
+ตัวอย่าง PDF ใช้ตัวอักษรใหญ่ขึ้น แยกหนึ่งสารหลักต่อหน้า และให้ P1, emergency, privacy กับ field card หาเจอได้เร็ว
+
+### Planning system
 
 | Shot Priority | Workflow Selector |
 |---|---|
@@ -49,6 +58,10 @@
 
 ```text
 ตรวจ privacy checklist ก่อนโพสต์คลิปแข่งที่มี screen recording
+```
+
+```text
+สรุปแผนนี้เป็น PDF ภาษาไทยแบบอ่านง่าย มี field card สำหรับเปิดดูหน้างาน และบันทึกไว้ที่ D:\vlog-plan.pdf
 ```
 
 ## รูปแบบคำตอบหลัก
@@ -94,6 +107,7 @@
 1. Hackathon วันเดียว ถ่ายคนเดียวด้วยมือถือ และตัด CapCut
 2. Devlog โปรเจกต์ 7 วัน และทำ master ใน DaVinci Resolve
 3. ทีม 3 คน อุปกรณ์น้อย และต้องแบ่งบทบาทโดยไม่รบกวนการแข่งขัน
+4. ส่งออก PDF ภาษาไทยที่อ่านง่าย พร้อมกำหนด output path และ visual QA
 
 รัน structural eval:
 
@@ -120,7 +134,8 @@ competition-vlog-planner/
 ├── references/
 │   ├── creator-patterns.md
 │   ├── editing-workflows.md
-│   └── field-production.md
+│   ├── field-production.md
+│   └── pdf-output.md
 ├── scripts/
 │   └── run_evals.py
 ├── tests/
@@ -152,4 +167,4 @@ competition-vlog-planner/
 
 ## English summary
 
-Competition Vlog Planner is a Thai-language Codex skill for planning deadline-driven competition vlogs and devlogs. Version 2.1 adds shot prioritization, field contingencies, privacy checks, tiered editing workflows, creator-informed storytelling patterns, and repeatable structural evals.
+Competition Vlog Planner is a Thai-language Codex skill for planning deadline-driven competition vlogs and devlogs. Version 2.2 adds optional readable PDF export, printable field cards, Thai typography guidance, visual QA, shot prioritization, field contingencies, privacy checks, tiered editing workflows, and repeatable structural evals.

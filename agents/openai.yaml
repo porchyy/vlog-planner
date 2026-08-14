@@ -1,4 +1,4 @@
 interface:
   display_name: "Competition Vlog Planner"
-  short_description: "วางแผนวล็อกแข่งพร้อม Shot Priority และ Safety"
-  default_prompt: "ใช้ $competition-vlog-planner วางแผนวล็อกการแข่งขันพร้อม story, P1/P2/P3, emergency/privacy checklist และ workflow ตัดต่อที่เหมาะกับอุปกรณ์"
+  short_description: "วางแผนวล็อกแข่งและส่งออก PDF ที่อ่านง่าย"
+  default_prompt: "ใช้ $competition-vlog-planner วางแผนวล็อกการแข่งขันพร้อม story, P1/P2/P3, safety, editing workflow และสรุปเป็น PDF ภาษาไทยที่อ่านง่าย"

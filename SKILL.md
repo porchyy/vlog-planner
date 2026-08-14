@@ -1,6 +1,6 @@
 ---
 name: competition-vlog-planner
-description: สร้างแผนวล็อกสไตล์ time-pressure/devlog สำหรับการแข่งขัน hackathon, coding competition, game jam, โปรเจกต์ที่มีเดดไลน์ หรือกิจกรรมที่มีจุดเริ่มและจบชัดเจน ครอบคลุม packaging, hook, story arc, shot list, retention, คลิปสั้น และ workflow ตัดต่อ ใช้เมื่อผู้ใช้ขอวางแผนวล็อก ถ่ายคลิปแข่ง ทำ devlog คิดชื่อหรือภาพปก วางไทม์ไลน์ถ่ายทำ แนะนำ CapCut, DaVinci Resolve หรือ After Effects วิเคราะห์สไตล์ครีเอเตอร์ หรือทำมายด์แมพการผลิตวิดีโอ
+description: สร้างแผนวล็อกสไตล์ time-pressure/devlog สำหรับการแข่งขัน hackathon, coding competition, game jam, โปรเจกต์ที่มีเดดไลน์ หรือกิจกรรมที่มีจุดเริ่มและจบชัดเจน ครอบคลุม packaging, hook, story arc, shot list, retention, คลิปสั้น, workflow ตัดต่อ และ PDF ภาษาไทยที่อ่านง่าย ใช้เมื่อผู้ใช้ขอวางแผนวล็อก ถ่ายคลิปแข่ง ทำ devlog คิดชื่อหรือภาพปก วางไทม์ไลน์ถ่ายทำ แนะนำ CapCut, DaVinci Resolve หรือ After Effects วิเคราะห์สไตล์ครีเอเตอร์ ทำมายด์แมพ หรือขอให้สรุปแผนเป็น PDF/printable plan
 ---
 
 # Competition Vlog Planner
@@ -12,6 +12,7 @@ description: สร้างแผนวล็อกสไตล์ time-pressur
 - อ่าน [references/creator-patterns.md](references/creator-patterns.md) เมื่อต้องวาง packaging, retention, วิเคราะห์สไตล์ครีเอเตอร์ หรือแตกคลิปยาวเป็น Shorts/Reels/TikTok
 - อ่าน [references/field-production.md](references/field-production.md) เมื่อต้องสร้าง shot priority, emergency checklist, privacy checklist หรือแผนสำหรับผู้ถ่ายคนเดียว/ทีม
 - อ่าน [references/editing-workflows.md](references/editing-workflows.md) เมื่อต้องเลือก CapCut, DaVinci Resolve, After Effects หรือส่งงานข้ามโปรแกรม
+- อ่าน [references/pdf-output.md](references/pdf-output.md) เมื่อผู้ใช้ขอ PDF, printable plan, เอกสารสรุป หรือ field card สำหรับเปิดดูหน้างาน
 
 ใช้ reference เป็น pattern library ไม่ใช้เป็นสูตรตายตัว และไม่เพิ่มหัวข้อที่ไม่เกี่ยวกับคำขอ
 
@@ -27,6 +28,7 @@ description: สร้างแผนวล็อกสไตล์ time-pressur
 - โปรแกรมที่ถนัด เช่น CapCut, DaVinci Resolve หรือ After Effects
 - แพลตฟอร์ม ความยาวเป้าหมาย และแนวภาพ เช่น YouTube 8 นาที 16:9 หรือ TikTok 45 วินาที 9:16
 - คนดูหลักและสิ่งที่อยากให้คนดูรู้สึกหรือได้กลับไป
+- รูปแบบส่งมอบและตำแหน่งไฟล์ เมื่อผู้ใช้ขอ PDF หรือเอกสารดาวน์โหลด
 
 ถ้าข้อมูลสำคัญยังขาด ให้ถามรวมกันแบบสั้นและตอบง่าย ถ้าผู้ใช้ต้องการแผนทันที ให้ระบุสมมติฐานแล้วดำเนินการต่อ หากผู้ใช้ขอเพียงส่วนเดียว เช่น เทคนิค CapCut หรือ shot list ให้ตอบส่วนนั้นโดยตรง ไม่บังคับสร้างแผนครบทุกหัวข้อ
 
@@ -202,3 +204,11 @@ description: สร้างแผนวล็อกสไตล์ time-pressur
 เมื่อผู้ใช้อ้างอิงครีเอเตอร์ ให้สร้าง style fingerprint จาก 5 มิติ ได้แก่ pacing, วิธีเล่า, การเลือกช็อต, กราฟิก/ข้อความ และเสียง/อารมณ์ขัน แปลงสิ่งที่เห็นเป็นคุณลักษณะระดับสูงแล้วปรับกับเรื่องของผู้ใช้ หลีกเลี่ยงการลอกถ้อยคำ มุก ลำดับซีน หรือเอกลักษณ์เฉพาะตัวแบบตรงตัว
 
 ปิดท้ายด้วยคำถามต่อยอดสั้นหนึ่งข้อ เช่น ต้องการสคริปต์คำพูด ชื่อคลิป แคปชั่น หรือ shot list แบบละเอียดเพิ่มหรือไม่
+
+## ส่งออกเป็น PDF เมื่อผู้ใช้ขอ
+
+ใช้คำตอบที่วางแผนแล้วเป็น source of truth และสร้างไฟล์ PDF จริงตาม [references/pdf-output.md](references/pdf-output.md) อย่าส่งเพียง Markdown หรือโค้ดสร้าง PDF แทนไฟล์ที่ผู้ใช้ขอ
+
+เลือก Quick field plan, Readable summary หรือ Full production book ตามความละเอียดที่ผู้ใช้ต้องการ ถ้าไม่ได้ระบุ ให้ใช้ Readable summary 4-6 หน้า เน้นตัวอักษรไทยขนาดอ่านจริง, P1 ก่อน P2/P3, emergency/privacy ที่หาเจอง่าย และ field card ที่เปิดดูหน้างานได้
+
+หลังสร้าง ให้ตรวจข้อความและเรนเดอร์ทุกหน้าเพื่อหา glyph เสีย ตารางล้น เนื้อหาซ้อน และหน้าที่แน่นหรือโล่งผิดปกติ แก้จนอ่านได้ที่ zoom 100% แล้วลบไฟล์ชั่วคราวก่อนส่ง final PDF

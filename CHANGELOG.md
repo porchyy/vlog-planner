@@ -2,6 +2,21 @@
 
 การเปลี่ยนแปลงสำคัญของโปรเจกต์บันทึกตามรูปแบบ [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) และใช้ [Semantic Versioning](https://semver.org/)
 
+## [2.2.0] - 2026-08-14
+
+### Added
+
+- Optional PDF export สำหรับ readable summary, quick field plan และ full production book
+- คู่มือจัดหน้า PDF ภาษาไทยที่กำหนดขนาดตัวอักษร ความหนาแน่น สี และรูปแบบ field card
+- ขั้นตอนเปิดไฟล์ ตรวจข้อความ เรนเดอร์ทุกหน้า และแก้ visual defect ก่อนส่ง
+- Eval สำหรับคำขอ PDF ภาษาไทยและภาพตัวอย่าง readable PDF ใน README
+
+### Changed
+
+- ลดตารางกว้างด้วย P1 cards, callout และ checklist เพื่อให้อ่านได้ที่ zoom 100%
+- ให้ PDF เป็นทางเลือกเฉพาะเมื่อผู้ใช้ขอ ไม่เปลี่ยนทุกคำตอบให้เป็นเอกสารโดยอัตโนมัติ
+- เพิ่ม output path และ document mode เข้าใน brief เมื่อต้องสร้างไฟล์
+
 ## [2.1.0] - 2026-08-14
 
 ### Added
@@ -38,4 +53,3 @@
 - Story arc แบบ Before / During / After
 - ไทม์ไลน์ถ่ายทำและแผนตัดต่อสำหรับวล็อกแข่งขัน
 - แนวทาง CapCut, DaVinci Resolve, After Effects และมายด์แมพ
-

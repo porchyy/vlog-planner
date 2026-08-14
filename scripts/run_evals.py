@@ -37,6 +37,12 @@ FEATURE_NEEDLES = {
     "consent_and_venue_rules": ("references/field-production.md", ["กติกาการแข่งขัน", "ความยินยอม", "พื้นที่ห้ามถ่าย"]),
     "missing_footage_fallback": ("references/field-production.md", ["ลืมถ่ายจุดสำคัญ", "ห้ามจัดฉากเป็นเหตุการณ์สด"]),
     "honest_payoff": ("SKILL.md", ["อย่าสร้างเหตุการณ์หรือผลลัพธ์ที่ไม่ได้เกิดขึ้น"]),
+    "pdf_optional_only_when_requested": ("references/pdf-output.md", ["เมื่อผู้ใช้ขอ PDF", "อย่าสร้าง PDF เอง"]),
+    "pdf_readable_hierarchy": ("references/pdf-output.md", ["body 9.5-11 pt", "หนึ่งสารหลักต่อหน้า", "ห้ามลดฟอนต์"]),
+    "pdf_thai_font": ("references/pdf-output.md", ["ฟอนต์ที่รองรับภาษาไทย", "ฝังฟอนต์"]),
+    "pdf_visual_qa": ("references/pdf-output.md", ["เรนเดอร์ทุกหน้า", "glyph ภาษาไทย", "zoom 100%"]),
+    "pdf_output_path": ("SKILL.md", ["รูปแบบส่งมอบและตำแหน่งไฟล์", "ไฟล์ PDF จริง"]),
+    "pdf_field_card": ("references/pdf-output.md", ["Field Card", "checklist ตัวใหญ่"]),
 }
 
 
@@ -69,11 +75,13 @@ def main() -> int:
         "references/creator-patterns.md",
         "references/field-production.md",
         "references/editing-workflows.md",
+        "references/pdf-output.md",
         "scripts/run_evals.py",
         "tests/evals.json",
         "docs/images/test-cover.png",
         "docs/images/test-shot-priority.png",
         "docs/images/test-workflow.png",
+        "docs/images/pdf-readable-example.png",
     ]
     checks: list[Check] = []
     for rel in required_files:
