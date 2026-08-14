@@ -1,105 +1,155 @@
 # Competition Vlog Planner
 
-สกิลภาษาไทยสำหรับวางแผนวล็อกการแข่งขันและ devlog ตั้งแต่โครงเรื่อง การถ่ายหน้างาน ไปจนถึง workflow ตัดต่อ
+สกิลภาษาไทยสำหรับวางแผนวล็อกการแข่งขันและ devlog ตั้งแต่ packaging ก่อนถ่าย ไปจนถึงการอ่าน retention หลังเผยแพร่ เหมาะกับ hackathon, coding competition, game jam และโปรเจกต์ที่มีเดดไลน์
 
-เหมาะกับ hackathon, coding competition, game jam, โปรเจกต์เร่งส่ง และกิจกรรมที่มีเวลาเริ่มกับเวลาจบชัดเจน
+> เวอร์ชัน 2.1 เพิ่ม Shot Priority, Emergency Checklist, Privacy Checklist, workflow 3 ระดับ และ eval 3 สถานการณ์
 
-## สกิลนี้ช่วยอะไร
+![ตัวอย่างแผน Competition Vlog Planner](docs/images/test-cover.png)
 
-- วาง story arc แบบ Before / During / After
-- คิด hook เปิดคลิปจากเดิมพัน ปัญหา หรือช่วงกดดัน
-- สร้างไทม์ไลน์ถ่ายทำตั้งแต่เตรียมตัวจนเดินทางกลับ
-- แยกช็อตที่ต้องมีออกจากช็อตเสริม
-- วางจังหวะตัดด้วย hour-counter, jump cut, timelapse และ sound design
-- เลือก workflow ให้เหมาะกับ CapCut, DaVinci Resolve และ After Effects
-- สร้างมายด์แมพสรุปเมื่อผู้ใช้ขอ
+## จุดเด่น
 
-สกิลปรับแผนตามระยะเวลางาน อุปกรณ์ จำนวนคนถ่าย โทนเรื่อง และโปรแกรมที่ผู้ใช้ถนัด ถ้าผู้ใช้ขอเพียงส่วนเดียว เช่น เทคนิค CapCut สกิลจะตอบเฉพาะส่วนนั้น
+- วาง viewer promise, title options, thumbnail moment และ hook ก่อนถ่าย
+- สร้าง story arc แบบ Before / During / After พร้อม progressive beats
+- แยกช็อตเป็น P1 ต้องมี, P2 ควรมี และ P3 ถ้ามีเวลา
+- จับคู่คำพูดกับ evidence B-roll เช่น error/fix, build version, timer, score และ reaction
+- เตรียม fallback สำหรับแบตหมด พื้นที่เต็ม เสียงเสีย ไฟล์หาย และลืมถ่าย
+- ตรวจ consent, กติกาสถานที่, API key, token, private repository และข้อมูลบนหน้าจอ
+- เลือก workflow แบบ CapCut only, CapCut -> DaVinci หรือ DaVinci -> After Effects -> DaVinci
+- วาง retention map, short-form derivative และ post-publish learning loop
 
-## ตัวอย่าง Prompt
+## ตัวอย่างผลลัพธ์
 
-```text
-ใช้ $competition-vlog-planner วางแผนวล็อกไปแข่ง AI Hackathon
-วันที่ 22 สิงหาคม งาน 12 ชั่วโมง ถ่ายคนเดียวด้วยมือถือและไมค์ไร้สาย
-อยากได้โทนตื่นเต้นปนตลก และจะตัดใน CapCut
-```
+| Shot Priority | Workflow Selector |
+|---|---|
+| ![Shot Priority](docs/images/test-shot-priority.png) | ![Workflow และ Safety](docs/images/test-workflow.png) |
 
-ตัวอย่างอื่น:
+ไฟล์ PDF ฉบับเต็มถูกสร้างจากชุดทดสอบและตรวจ visual layout ทุกหน้าแล้ว ผู้ใช้สามารถรัน eval ซ้ำเพื่อสร้างรายงานผลในเครื่องของตนเอง
 
-```text
-ช่วยคิดไทม์ไลน์ถ่ายทำวล็อกแข่งขันให้หน่อย
-```
+## Quick start
 
-```text
-มีฟุตเทจแข่งโค้ด 8 ชั่วโมงแล้ว ช่วยวางจังหวะตัดใน CapCut อย่างเดียว
-```
+ดาวน์โหลดหรือ clone repository แล้วนำโฟลเดอร์ `competition-vlog-planner` ไปไว้ในโฟลเดอร์ skills ของ Codex จากนั้นเปิด session ใหม่
+
+เรียกใช้โดยตรง:
 
 ```text
-ทำมายด์แมพแผนวล็อก hackathon ให้หน่อย
+ใช้ $competition-vlog-planner วางแผนวล็อก AI Hackathon 12 ชั่วโมง
+ถ่ายคนเดียวด้วยมือถือและไมค์ไร้สาย ตัดใน CapCut
+ทำ YouTube 8 นาทีและ Short 45 วินาที โทนตื่นเต้นปนตลก
 ```
 
-## ข้อมูลที่สกิลใช้
-
-สกิลจะตรวจข้อมูลห้าส่วนก่อนวางแผน:
-
-1. ชื่องานและวันที่
-2. ระยะเวลาของกิจกรรม
-3. โทนหรือครีเอเตอร์อ้างอิง
-4. อุปกรณ์ถ่ายทำ
-5. โปรแกรมตัดต่อ
-
-ถ้าข้อมูลยังไม่ครบ สกิลจะถามรวมเป็นชุดสั้น ๆ โดยไม่ถามซ้ำสิ่งที่ผู้ใช้บอกแล้ว
-
-## รูปแบบคำตอบ
-
-คำตอบหลักประกอบด้วย:
-
-1. โครงเรื่องและ hook
-2. ไทม์ไลน์ถ่ายทำ
-3. ตารางเทคนิคตัดต่อ
-4. Workflow ข้ามโปรแกรม
-5. มายด์แมพ เมื่อผู้ใช้ร้องขอ
-
-สกิลยังเตือนเรื่องสิทธิ์ถ่ายภาพ ความเป็นส่วนตัว ข้อมูลบนหน้าจอ แบตเตอรี่ พื้นที่เก็บข้อมูล และสิทธิ์การใช้เพลงตามบริบทของงาน
-
-## การติดตั้ง
-
-ดาวน์โหลดหรือ clone repository แล้วนำโฟลเดอร์ `competition-vlog-planner` ไปไว้ในตำแหน่ง skills ที่ Codex ของคุณใช้งาน จากนั้นเปิด session ใหม่และเรียกสกิลด้วย `$competition-vlog-planner`
-
-ตัวอย่างคำสั่งเรียกใช้:
+คำขอแบบสั้นก็ใช้ได้:
 
 ```text
-ใช้ $competition-vlog-planner ช่วยวางแผนวล็อกการแข่งขันของฉัน
+ช่วยทำ shot list แบบ P1/P2/P3 สำหรับ coding competition วันเดียว
 ```
 
-## โครงสร้างโปรเจกต์
+```text
+ช่วยวาง workflow DaVinci -> After Effects สำหรับ devlog 7 วัน
+```
+
+```text
+ตรวจ privacy checklist ก่อนโพสต์คลิปแข่งที่มี screen recording
+```
+
+## รูปแบบคำตอบหลัก
+
+1. Packaging และ Hook
+2. โครงเรื่องและ Progressive Beats
+3. ไทม์ไลน์ถ่ายทำ
+4. Shot Priority แบบ P1/P2/P3
+5. Emergency และ Privacy Checklist
+6. เทคนิคตัดต่อและ Retention Map
+7. Workflow ตัดต่อพร้อมระดับที่เลือก
+8. แผน Shorts/Reels/TikTok หรือแผนโพสต์เมื่อเกี่ยวข้อง
+9. มายด์แมพเมื่อผู้ใช้ขอ
+
+สกิลจะตอบเฉพาะส่วนที่ผู้ใช้ขอ ไม่บังคับแสดงทุกหัวข้อเสมอ
+
+## Workflow 3 ระดับ
+
+| ระดับ | Toolchain | เหมาะกับ |
+|---|---|---|
+| มือใหม่/เร็วที่สุด | CapCut | มือถือ งานวันเดียว ต้องโพสต์เร็ว |
+| ระดับกลาง | CapCut -> DaVinci หรือ DaVinci อย่างเดียว | ต้องการ master ที่ควบคุม color และ sound ดีขึ้น |
+| ระดับจริงจัง | DaVinci -> After Effects -> DaVinci | หลายกล้อง motion graphics หรือ compositing |
+
+สกิลเลือก toolchain ที่สั้นที่สุดและไม่บังคับข้ามโปรแกรม ถ้าแอปเดียวทำงานได้ครบ
+
+## Safety by design
+
+แผนเต็มรูปแบบจะเลือก checklist ที่สัมพันธ์กับงานจริง เช่น:
+
+- battery, storage, audio, overheating และ file backup
+- venue rules, consent และพื้นที่ห้ามถ่าย
+- API key, access token, password, private URL และ notification
+- fallback เมื่อ footage ขาด โดยไม่จัดฉากย้อนหลังให้ดูเหมือนเหตุการณ์จริง
+- master export QC, caption, safe zone และสิทธิ์เพลง
+
+คำแนะนำเหล่านี้ไม่ใช่คำปรึกษากฎหมาย ผู้ใช้ต้องตรวจข้อกำหนดของสถานที่ การแข่งขัน และกฎหมายในพื้นที่ของตนเอง
+
+## การทดสอบ
+
+ชุด eval ครอบคลุม:
+
+1. Hackathon วันเดียว ถ่ายคนเดียวด้วยมือถือ และตัด CapCut
+2. Devlog โปรเจกต์ 7 วัน และทำ master ใน DaVinci Resolve
+3. ทีม 3 คน อุปกรณ์น้อย และต้องแบ่งบทบาทโดยไม่รบกวนการแข่งขัน
+
+รัน structural eval:
+
+```powershell
+python scripts/run_evals.py --skill-root . --output test-results.md
+```
+
+ตรวจโครงสร้าง skill ด้วย validator ของ `skill-creator`:
+
+```powershell
+python <path-to-skill-creator>/scripts/quick_validate.py .
+```
+
+เกณฑ์และ prompt อยู่ใน [`tests/evals.json`](tests/evals.json) สคริปต์จะคืน exit code `0` เมื่อผ่านครบ และ `1` เมื่อมีข้อใดขาด
+
+## โครงสร้าง repository
 
 ```text
 competition-vlog-planner/
+├── agents/
+│   └── openai.yaml
+├── docs/
+│   └── images/
+├── references/
+│   ├── creator-patterns.md
+│   ├── editing-workflows.md
+│   └── field-production.md
+├── scripts/
+│   └── run_evals.py
+├── tests/
+│   └── evals.json
+├── CHANGELOG.md
+├── LICENSE
 ├── README.md
-├── SKILL.md
-└── agents/
-    └── openai.yaml
+└── SKILL.md
 ```
 
-- `SKILL.md` เก็บ trigger และขั้นตอนทำงานของสกิล
-- `agents/openai.yaml` เก็บชื่อ คำอธิบาย และ default prompt ที่แสดงใน UI
-- `README.md` อธิบายโปรเจกต์สำหรับผู้อ่านบน GitHub
+## แหล่งแนวทาง
 
-## ผลการทดสอบ
+หลักการ creator-informed มาจากคู่มือแพลตฟอร์มและแหล่งต้นทาง เช่น [YouTube Help](https://support.google.com/youtube/answer/9314415), [TikTok Creative Codes](https://ads.tiktok.com/business/en-US/creative-codes), [CapCut Micro-Documentary Guide](https://www.capcut.com/create/micro-documentary-short-form-video), [Thomas Frank](https://thomasjfrank.com/creator/writing-a-script/) และ [Colin and Samir](https://www.colinandsamir.com/playbook)
 
-- ผ่าน `quick_validate.py`
-- ทดสอบ prompt ที่ให้ข้อมูลครบ
-- ทดสอบการถามกลับเมื่อข้อมูลขาด
-- ทดสอบคำขอเฉพาะ CapCut
-- ทดสอบมายด์แมพ 6 กิ่ง
+ดูรายการแหล่งข้อมูล วันที่เผยแพร่ที่ระบุ และวันที่ตรวจล่าสุดใน [`references/creator-patterns.md`](references/creator-patterns.md)
 
-สกิลไม่ใช้สคริปต์ภายนอกและไม่มี dependency เพิ่มเติม
+สกิลใช้แนวคิดระดับสูงเพื่อวางระบบเรื่องและการถ่าย ไม่ลอกถ้อยคำ มุก ลำดับซีน หรือ visual signature ของครีเอเตอร์รายบุคคล
 
 ## ข้อจำกัด
 
-สกิลวางแผนเนื้อหา การถ่าย และการตัดต่อ แต่ไม่ได้ตัดไฟล์วิดีโอแทนผู้ใช้ ผู้ใช้ควรตรวจข้อกำหนดของสถานที่ ความยินยอมของผู้ร่วมงาน และลิขสิทธิ์เพลงก่อนเผยแพร่
+- สกิลวางแผน แต่ไม่ได้ถ่ายหรือตัดวิดีโอแทนผู้ใช้
+- retention benchmarks แตกต่างตามช่อง ผู้ชม ความยาว และแหล่ง traffic
+- ฟีเจอร์และหน้าตาโปรแกรมอาจเปลี่ยนตามเวอร์ชัน
+- ควรตรวจ link และข้อกำหนดแพลตฟอร์มอีกครั้งเมื่องานขึ้นกับข้อมูลปัจจุบัน
+
+## License
+
+เผยแพร่ภายใต้ [MIT License](LICENSE)
 
 ## English summary
 
-Competition Vlog Planner is a Thai-language Codex skill for planning time-pressure competition vlogs and devlogs. It produces a story arc, filming timeline, editing plan, cross-app workflow, and an optional mind map for hackathons, coding competitions, game jams, and deadline-driven projects.
+Competition Vlog Planner is a Thai-language Codex skill for planning deadline-driven competition vlogs and devlogs. Version 2.1 adds shot prioritization, field contingencies, privacy checks, tiered editing workflows, creator-informed storytelling patterns, and repeatable structural evals.

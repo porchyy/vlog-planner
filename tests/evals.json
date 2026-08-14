@@ -1,0 +1,50 @@
+{
+  "version": "2.1.0",
+  "cases": [
+    {
+      "id": "one-day-solo-hackathon",
+      "prompt": "ใช้ $competition-vlog-planner วางแผนวล็อก AI Hackathon 12 ชั่วโมง ถ่ายคนเดียวด้วยมือถือ ไมค์ไร้สาย และ power bank ตัดใน CapCut ทำ YouTube 8 นาทีและ Short 45 วินาที โทนตื่นเต้นปนตลก",
+      "expected": [
+        "packaging",
+        "progressive_beats",
+        "p1_p2_p3",
+        "solo_minimum_coverage",
+        "battery_storage_audio_fallback",
+        "privacy_screen_secrets",
+        "capcut_only_workflow",
+        "retention_map",
+        "short_form_arc"
+      ]
+    },
+    {
+      "id": "seven-day-devlog",
+      "prompt": "ช่วยวาง devlog โปรเจกต์เกม 7 วัน ถ่ายด้วยกล้องและมือถือ ตัด DaVinci Resolve อยากได้คลิป YouTube 10 นาที โทนจริงจังแต่เป็นมนุษย์",
+      "expected": [
+        "packaging",
+        "daily_open_close",
+        "progressive_beats",
+        "p1_p2_p3",
+        "backup_and_file_naming",
+        "davinci_master_workflow",
+        "privacy_screen_secrets",
+        "retention_map",
+        "post_publish_loop"
+      ]
+    },
+    {
+      "id": "small-team-limited-gear",
+      "prompt": "ทีม 3 คนไปแข่ง coding competition วันเดียว มีมือถือเครื่องเดียวกับขาตั้งเล็ก ช่วยวางแผนถ่ายแบบไม่รบกวนงานและแบ่งหน้าที่ให้ทีม ตัดเร็วใน CapCut",
+      "expected": [
+        "team_roles",
+        "minimum_viable_coverage",
+        "p1_p2_p3",
+        "consent_and_venue_rules",
+        "privacy_screen_secrets",
+        "missing_footage_fallback",
+        "capcut_only_workflow",
+        "honest_payoff"
+      ]
+    }
+  ]
+}
+
